@@ -1,5 +1,5 @@
 :root{
-    --font-family:  font-family: 'Franklin Gothic Medium', 'Arial Narrow', ;
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow' ;
 }
 
 *{
@@ -113,6 +113,17 @@ nav .links .btn{
     transform: scaleX(1);
 }
 
+.hover-underline-ft::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1a1919;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: 0.159s transform ease-in-out;
+}
 
 .strip-1{
     height: 5rem;
@@ -163,9 +174,302 @@ nav .links .btn{
     width: auto;
 
     border-radius: 0.6rem;
+    transition: all 0.5s ease-in-out;
+}
+.new-arrivals .cards .card img:hover{
+    transform: scale(1.1);
+}
+
+.card .container {
+    margin-top: 1rem;
 }
 .card .container .explore-more{
 
     width: max-content;
     cursor: pointer;
+}
+
+.sale{
+    height: 110vh;
+    width: 100vw;
+    position: relative;
+}
+
+.sale > img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.sale .sale-sale{
+    position: absolute;
+    left: 10vw;
+    top: 40vh;
+    font-size: 6rem;
+    text-transform: uppercase;
+
+    color: #D5AD00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: gig infinite;
+    transition: all 0.5s ease-in-out;
+   
+}
+
+.sale > .sale-hurry{
+    position: absolute;
+    font-size: 4.9rem;
+    left: 10vw;
+    top: 60vh;
+
+
+    font-family: var(--font-family);
+}
+.sale > .container{
+    position: absolute;
+    left: 10vw;
+    top: 80vh;
+    font-family: var(--font-family);
+}
+.sale > .container .description{
+    font-size: 1.5rem;
+}
+
+.sale > .container .description > span{
+    font-size: 3rem;
+}
+
+.sale > .container .date{
+    margin-top: 2rem;
+}
+
+.sale > .container .date > p{
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.sale > .container > h2{
+    margin-top: 1rem;
+   
+    background-color: #D5AD00;
+    width: 8rem;
+    height: 3rem;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 0.5rem;
+}
+
+.sale > .container > h2:hover{
+    cursor: pointer;
+}
+
+.sale > .container .date .terms{
+    font-size: 0.9rem;
+}
+
+.popular{
+    width: 100vw;
+    height: 120vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    font-family: var(--font-family);
+}
+
+.popular > h1{
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+
+    z-index: 5;
+
+}
+
+
+.popular .card >h4{
+    margin-top: 1rem;
+}
+
+.popular .card >img{
+    width: 40vw;
+    height: auto;
+
+    border-radius: 0.8rem;
+    transition: all ease-in-out 0.5s;
+}
+
+.popular .card >img:hover{
+    transform: scale(1.1);
+
+}
+
+.popular .card >p:hover{
+    cursor: pointer;
+}
+
+.app-download{
+    position: relative;
+    /* top: -1rem; */
+
+    width: 100vw;
+    height: 30vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-family: var(--font-family);
+    background: rgb(127,127,176);
+    background: linear-gradient(90deg, rgba(127,127,176,1) 0%, rgba(13,10,61,1) 100%, rgba(0,212,255,1) 100%); 
+
+}
+.app-download .container{
+    position: absolute;
+    left: 10vw;
+
+    font-size: 2rem;
+
+}
+
+.app-download .appstore-playstore{
+    position: absolute;
+    right: 10vw;
+}
+.app-download .appstore-playstore > img{
+    width: 20vw;
+
+}
+.app-download .appstore-playstore > img:hover{
+    cursor: pointer;
+}
+
+.community{
+    width: 100vw;
+    height: 50vh;
+
+    background: rgb(127,127,176);
+    background: linear-gradient(90deg, rgba(127,127,176,1) 0%, rgba(13,10,61,1) 100%, rgba(0,212,255,1) 100%); 
+    position: relative;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    color: #1a1919;
+    font-family: var(--font-family);
+}
+
+
+.community >h1{
+    position: absolute;
+    top: 15vh;
+}
+
+.community .send-message{
+    position: absolute;
+    top: 30vh;
+
+}
+
+.community .send-message > input{
+
+    color: #1a1919;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #1a1919;
+
+    font-size: 2rem;
+}
+
+.community .send-message > input:focus{
+    outline: none;
+}
+
+
+.community .send-message > input::placeholder{
+    color: #1a1919;
+}
+
+
+.community .send-message > .btn{
+    position: absolute;
+    top: 1.49vh;
+    right: 0vw;
+
+
+    color: #f5f5f5;
+    background: #141414;
+    height: 2rem;
+    width: 6rem;
+
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    border: none;
+    border-radius: 0.2rem;
+    border-bottom: 2px solid #1a1919;
+}
+
+.community .send-message > btn:hover{
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+
+    width: 100vw;
+    height: 40vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-family: var(--font-family);
+
+    background: rgb(127,127,176);
+    background: linear-gradient(90deg, rgba(127,127,176,1) 0%, rgba(13,10,61,1) 100%, rgba(0,212,255,1) 100%); 
+}
+
+footer .social{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    width: 20vw;
+
+    flex-direction: column;
+
+}
+
+footer .social .logos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: self-start;
+    width: 50%;
+}
+
+
+footer .links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 40%;
+
+}
+
+footer .links .f-card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    flex-direction: column;
+}
+footer .links .f-card li{
+    list-style-type: none;    
 }
